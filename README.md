@@ -1,6 +1,9 @@
 # Ansible-Sandbox
 Ansible sandbox using vagrant
 
+# Need Vagrant/VirtualBox
+You have to install Vagrant to try this on your local machine https://developer.hashicorp.com/vagrant/downloads <br>
+You need VirtualBox too 
 
 # Initialisation
 To start VM use `vagrant up`
