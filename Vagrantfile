@@ -16,18 +16,18 @@ Vagrant.configure("2") do |config|
         v.cpus = CPU
     end
 
-    # Master node config
-    config.vm.define ANSIBLE_NAME do |master|
+    # Ansible node config
+    config.vm.define ANSIBLE_NAME do |ansible|
 
         # Hostname and network config
-        master.vm.box = IMAGE_NAME
-        master.vm.network "private_network", ip: "#{NODE_NETWORK_BASE}.10"
-        master.vm.hostname = ANSIBLE_NAME
+        ansible.vm.box = IMAGE_NAME
+        ansible.vm.network "private_network", ip: "#{NODE_NETWORK_BASE}.10"
+        ansible.vm.hostname = ANSIBLE_NAME
 
         # Provision
-        master.vm.provision "shell", path: "provision/update.sh"
-        master.vm.provision "shell", path: "provision/python.sh"
-        master.vm.provision "shell", path: "provision/ansible.sh"
+        ansible.vm.provision "shell", path: "provision/update.sh"
+        ansible.vm.provision "shell", path: "provision/python.sh"
+        ansible.vm.provision "shell", path: "provision/ansible.sh"
     end
 
     # Master node config
