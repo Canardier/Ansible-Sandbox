@@ -10,6 +10,6 @@ To start VM use `vagrant up` <br>
 To connect VM use `vagrant ssh {VmName}` (vm name is in vagrantfile and when you up can see the name) <br>
 
 # Machine
-Ansible 192.168.50.10
-Master  192.168.50.11
-Worker  192.168.50.12-254
+<b>Ansible</b> 192.168.50.10        <br>
+<b>Master</b>  192.168.50.11        <br>
+<b>Worker</b>  192.168.50.12-254    <br>
